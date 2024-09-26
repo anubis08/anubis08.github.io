@@ -1,0 +1,185 @@
+
+body {
+  background: black;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:300");
+*{
+  margin: 0;
+  padding: 0;
+}
+.title {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
+  position: absolute;
+  top: 20px; 
+  left: 20px;
+  z-index: 10;
+}
+
+
+.elon-image {
+  width: 400px;
+  position: absolute;
+  top: 300px;
+  right: 20px;
+  filter: grayscale(100%);
+  border-radius: 10px;
+  z-index:5;
+  
+
+}
+
+
+.credits {
+  color:gray;
+  position: absolute;
+  top: 710px;
+  right: 20px;
+  text-align: center;
+
+
+
+}
+
+a {
+  color:white;
+
+}
+
+a:visited {
+  color: white
+}
+
+.main {
+  color: white;
+}
+
+#accordion {
+  margin: 100px auto;
+  width: 600px;
+}
+
+#accordion li {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background: #1E1C1C;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#accordion li label{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#accordion li label span {
+  transform:rotate(90deg);
+  font-size: 22px;
+  color: white;
+}
+
+#accordion label + input[type='radio'] {
+  display: none;
+}
+
+#accordion .content {
+  padding:0 10px;
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+#accordion label + input[type='radio']:checked + .content{
+  max-height: 400px;
+}
+
+label {
+  margin: 0px 10px 30px;
+  position: relative;
+  height: 60px;
+  border: none;
+  outline: none;
+  color: #FF4545;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 200px;
+  font-family: 'Raleway', sans-serif;
+  display: inline-block;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  z-index: -1; 
+  transition: background-position 0.3s;
+  background-size: 200%; 
+}
+
+label:hover::before {
+  background-position: 100% 0; 
+}
+
+label:hover {
+  color: white; 
+  box-shadow: 0 0 20px rgba(238, 9, 121, 0.5); 
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.9);
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 10px;
+  background: linear-gradient(45deg, orange, pink, orange, pink);
+  background-size: 400%;
+  animation: moveBackground 4s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
