@@ -155,6 +155,7 @@ footer {
   background: transparent;
   box-shadow: 0 0 10px rgba(255, 165, 0, 0.9);
   overflow: hidden;
+  margin: 10px 30px 50px;
 }
 
 .footer::before {
