@@ -163,22 +163,6 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
-  border-radius: 10px;
-  background: linear-gradient(45deg, orange, pink, orange, pink);
-  background-size: 400%;
-  animation: moveBackground 4s linear infinite;
 }
 
-@keyframes moveBackground {
-  0% {
-      background-position: 0% 0%;
-  }
-  50% {
-      background-position: 100% 100%;
-  }
-  100% {
-      background-position: 0% 0%;
-  }
-}
 
