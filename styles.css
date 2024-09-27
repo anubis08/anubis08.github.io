@@ -19,28 +19,24 @@ body {
 }
 
 
-.elon-image {
+.elon-image, .elon-x {
   width: 400px;
   position: absolute;
-  top: 300px;
-  right: 20px;
+  top: 300px; 
   filter: grayscale(100%);
   border-radius: 40px;
-  z-index:5;
-  
-
+  z-index: 5;
 }
 
+.elon-image {
+  right: 20px; 
+}
+
+/*this is the one on the left*/
 .elon-x {
-    position: absolute;
-    left: 0; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    width: 150px;
-    padding: 10px;
-    filter: grayscale(100%);
-    
+  left: 20px; 
 }
+
 
 
 .credits {
