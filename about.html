@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ElderTech Engaged</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="responsive.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            background: #1f242d;
+            color: white;
+            animation: fadein 3s ease-out forwards;
+        }
+
+        nav ul li a.this-one-is-active {
+            color: #7cf03d;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            padding: 25px 9%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1f242d;
+            z-index: 100;
+        }
+
+        .navbar .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .navbar ul {
+            display: flex;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            margin-left: 35px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            transition: 0.5s;
+        }
+
+        .navbar ul li a:hover {
+            color: #7cf03d;
+        }
+
+        .section-container {
+            padding: 120px 9%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center; /* Center content */
+            gap: 30px;
+            padding: 10px 0;
+            margin: 20px 0; /* Adjusted margin for better spacing */
+        }
+
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .section-content {
+            max-width: 600px;
+            text-align: center; /* Center the text */
+        }
+
+        h1, h2, h3 {
+            color: #7cf03d;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .img-container {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: 3px solid #7cf03d; 
+            overflow: hidden;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: auto; 
+            object-fit: cover; 
+        }
+
+/* Slideshow Styles */
+.slideshow-container {
+    max-width: 70%;
+    position: relative;
+    margin-top: 30px;
+    height: 400px; 
+    text-align: center; 
+}
+
+.slide {
+    display: none; 
+    width: 100%;
+    height: 100%; 
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+}
+
+.slide img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    border: 3px solid #b2dab4; 
+}
+
+.prev {
+    display: hidden;
+}
+
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #7cf03d;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    color: #7cf03d;
+}
+
+.section:last-child h2 {
+    text-align: center; /* Center the title */
+    font-size: 36px; /* Increase the title size */
+    margin-bottom: 20px; /* Space between title and slideshow */
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">ElderTech Engaged</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="this-one-is-active" href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+        </ul>
+    </nav>
+
+    <section class="section-container">
+        <div class="section">
+            <div class="section-content">
+                <h1>About Us</h1>
+                <p>Founded in July 2024, ElderTech Engaged is a youth-led initiative committed to closing the digital divide for seniors. Our focus goes beyond simply teaching technology; we aim to empower seniors by providing them with essential skills and the confidence to navigate today's digital landscape. Our approach emphasizes mental engagement and cognitive wellness, helping to keep their minds active and resilient. By offering hands-on workshops tailored to their needs, we foster an environment of learning that is both engaging and supportive.</p>
+            </div>
+            <div class="img-container">
+                <img src="https://i.ibb.co/qm9rWrf/eldertech-logo.jpg" alt="About Us Image">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-content">
+                <h2>Our Mission</h2>
+                <p>Our mission is to bring technology literacy to seniors, bridging generational divides and fostering independence in a digital world. We provide practical skills that enable them to connect with family, access healthcare resources, and safely explore online. Mental engagement plays a key role in our programs, as we recognize that learning technology stimulates cognitive processes and enriches overall well-being. We believe that by fostering this knowledge, seniors can reclaim their autonomy and improve their quality of life.</p>
+            </div>
+            <div class="img-container">
+                <img src="https://img.freepik.com/free-vector/blue-futuristic-networking-technology_53876-100679.jpg?t=st=1730574147~exp=1730577747~hmac=09c4e9912b5a417cda300ae442e6bdc3a2d6d88f4f2500182da4970034c67f7d&w=1380" alt="Our Mission Image">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-content">
+                <h2>Why We Started</h2>
+                <p>We launched ElderTech Engaged with a clear purpose: to address the gap in digital literacy among older adults. In an increasingly digital society, staying connected is critical for mental and emotional health. By empowering seniors with these skills, we’re fostering independence and confidence, supporting their ability to engage with family, friends, and essential online resources. Our dedicated team works to ensure that every senior feels comfortable and capable in the digital world, paving the way for a more connected community.</p>
+            </div>
+            <div class="img-container">
+                <img src="https://img.freepik.com/free-photo/old-man-sitting-table-working-with-laptop_1157-33736.jpg?t=st=1730573919~exp=1730577519~hmac=31a32b79a07d2dc342e7c803bfcf18a71d750f1b4e30241489d81093ef7763d4&w=1380" alt="Why We Started Image">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-content">
+                <h2>Where We Operate</h2>
+                <p>Our workshops are hosted at senior centers, churches, and community spaces throughout Cerritos. We collaborate with local organizations and community leaders to bring accessible tech education directly to seniors. These settings provide familiar, comfortable environments where our team can work one-on-one with seniors to address their unique needs and build confidence in their skills. Our goal is to make these resources available to all seniors in our community, ensuring no one is left behind.</p>
+            </div>
+            <div class="img-container">
+                <img src="https://img.freepik.com/free-photo/cinematic-scene-depicting-support-kindness-amongst-communities-people_23-2151253350.jpg?t=st=1730574267~exp=1730577867~hmac=77bff5535a7502a69c6f1aa43b2100f7edf888058abe9f839273620bd46ac526&w=1380" alt="Where We Operate Image">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-content">
+                <h3>How We Help</h3>
+                <p>Our approach is hands-on, personalized, and compassionate. Through our workshops, seniors learn to navigate smartphones, use social media, manage online banking, and more. Each workshop includes one-on-one guidance tailored to the participant's needs, whether they’re new to technology or looking to expand their skills. We ensure that each lesson contributes to digital confidence and independence, equipping seniors with the tools they need to thrive in a tech-savvy world. Additionally, we incorporate elements of mental engagement, providing stimulating activities that promote cognitive health.</p>
+            </div>
+            <div class="img-container">
+                <img src="https://img.freepik.com/free-photo/smiley-old-man-nurse-having-video-call-laptop_23-2148740046.jpg?t=st=1730574385~exp=1730577985~hmac=a9f8d36b68e84f3c51c0e0c3f45dbfa32162a3f4838baa9d39d42dc79a197a1b&w=1380" alt="How We Help Image">
+            </div>
+        </div>
+
+        <!-- hosted all images on the web and not as assets locally.. cooked if the links break -->
+        <section class="slideshow-container">
+            <h2>Workshop Highlights</h2>
+            <div class="slide">
+                <img src="https://i.ibb.co/FWLkJjW/image.png" alt="Workshop Image 1">
+            </div>
+            <div class="slide">
+                <img src="https://i.ibb.co/cxbzfyP/image.png" alt="Workshop Image 2">
+            </div>
+            <div class="slide">
+                <img src="https://i.ibb.co/KmcKDMS/image.png" alt="Workshop Image 3">
+            </div>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </section>
+    </section>
+
+    <script>
+           let slideIndex = 0;
+showSlides();
+
+function plusSlides(n) {
+    slideIndex += n;
+    showSlides();
+}
+
+function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    if (slideIndex >= slides.length) { slideIndex = 0; }
+    if (slideIndex < 0) { slideIndex = slides.length - 1; }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = "0"; // Fade out all slides
+        slides[i].style.transition = "opacity 1s"; // Transition effect for opacity
+        slides[i].style.display = "none"; // Hide the slides by default
+    }
+
+    slides[slideIndex].style.display = "block"; // Show the current slide
+    slides[slideIndex].style.opacity = "1"; // Fade in the current slide
+}
+
+    </script>
+</body>
+</html>
