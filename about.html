@@ -3,311 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | ElderTech Engaged</title>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>About - ElderTech Engaged</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        @keyframes fadein {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        body {
-            background: #1f242d;
-            color: white;
-            animation: fadein 3s ease-out forwards;
-        }
-
-        nav ul li a.this-one-is-active {
-            color: #7cf03d;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .navbar {
-            position: fixed;
-            width: 100%;
-            padding: 25px 9%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #1f242d;
-            z-index: 100;
-        }
-
-        .navbar .logo {
-            font-size: 30px;
-            font-weight: 700;
-            color: white;
-        }
-
-        .navbar ul {
-            display: flex;
-        }
-
-        .navbar ul li {
-            list-style: none;
-            margin-left: 35px;
-        }
-
-        .navbar ul li a {
-            color: white;
-            font-size: 20px;
-            font-weight: 500;
-            transition: 0.5s;
-        }
-
-        .navbar ul li a:hover {
-            color: #7cf03d;
-        }
-
-        .section-container {
-            padding: 120px 9%;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .section {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center; /* Center content */
-            gap: 30px;
-            padding: 10px 0;
-            margin: 20px 0; /* Adjusted margin for better spacing */
-        }
-
-        .section:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .section-content {
-            max-width: 600px;
-            text-align: center; /* Center the text */
-        }
-
-        h1, h2, h3 {
-            color: #7cf03d;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .img-container {
-            width: 100%;
-            max-width: 350px;
-            height: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            border: 3px solid #7cf03d; 
-            overflow: hidden;
-        }
-
-        .img-container img {
-            width: 100%;
-            height: auto; 
-            object-fit: cover; 
-        }
-
-/* Slideshow Styles */
-.slideshow-container {
-    max-width: 70%;
-    position: relative;
-    margin-top: 30px;
-    height: 400px; 
-    text-align: center; 
-}
-
-.slide {
-    display: none; 
-    width: 100%;
-    height: 100%; 
-    border-radius: 10px;
-    overflow: hidden;
-    opacity: 0; 
-    transition: opacity 1s ease-in-out; 
-}
-
-.slide img {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover; 
-    border: 3px solid #b2dab4; 
-}
-
-.prev {
-    display: hidden;
-}
-
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 60%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: #7cf03d;
-    font-weight: bold;
-    font-size: 30px;
-    transition: 0.3s;
-    z-index: 10;
-}
-
-.next {
-    right: 0;
-}
-
-.prev:hover, .next:hover {
-    color: #7cf03d;
-}
-
-.section:last-child h2 {
-    text-align: center; /* Center the title */
-    font-size: 36px; /* Increase the title size */
-    margin-bottom: 20px; /* Space between title and slideshow */
-}
-
-    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <meta name="description" content="Learn about ElderTech, a youth-led organization enhancing technological literacy among seniors.">
+    <meta name="keywords" content="ElderTech, seniors, technology education, Cerritos, CA, digital literacy">
+    <meta name="robots" content="index, follow">
 </head>
 <body>
+
+    <!-- Original navbar style preserved -->
     <nav class="navbar">
         <a href="index.html" class="logo">ElderTech Engaged</a>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a class="this-one-is-active" href="about.html">About</a></li>
+            <li class="active"><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="volunteer.html">Volunteer</a></li>
         </ul>
     </nav>
 
-    <section class="section-container">
-        <div class="section">
-            <div class="section-content">
-                <h1>About Us</h1>
-                <p>Founded in July 2024, ElderTech Engaged is a youth-led initiative committed to closing the digital divide for seniors. Our focus goes beyond simply teaching technology; we aim to empower seniors by providing them with essential skills and the confidence to navigate today's digital landscape. Our approach emphasizes mental engagement and cognitive wellness, helping to keep their minds active and resilient. By offering hands-on workshops tailored to their needs, we foster an environment of learning that is both engaging and supportive.</p>
-            </div>
-            <div class="img-container">
-                <img src="https://i.ibb.co/qm9rWrf/eldertech-logo.jpg" alt="About Us Image">
-            </div>
+    <section class="about fade-in">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>About ElderTech</h1>
+            <p>ElderTech is a youth-led organization dedicated to enhancing technological literacy among seniors, helping them stay engaged, independent, and digitally confident.</p>
         </div>
-
-        <div class="section">
-            <div class="section-content">
-                <h2>Our Mission</h2>
-                <p>Our mission is to bring technology literacy to seniors, bridging generational divides and fostering independence in a digital world. We provide practical skills that enable them to connect with family, access healthcare resources, and safely explore online. Mental engagement plays a key role in our programs, as we recognize that learning technology stimulates cognitive processes and enriches overall well-being. We believe that by fostering this knowledge, seniors can reclaim their autonomy and improve their quality of life.</p>
-            </div>
-            <div class="img-container">
-                <img src="https://images.pexels.com/photos/3768140/pexels-photo-3768140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Our Mission Image">
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-content">
-                <h2>Why We Started</h2>
-                <p>We launched ElderTech Engaged with a clear purpose: to address the gap in digital literacy among older adults. In an increasingly digital society, staying connected is critical for mental and emotional health. By empowering seniors with these skills, we’re fostering independence and confidence, supporting their ability to engage with family, friends, and essential online resources. Our dedicated team works to ensure that every senior feels comfortable and capable in the digital world, paving the way for a more connected community.</p>
-            </div>
-            <div class="img-container">
-                <img src="https://images.pexels.com/photos/3831645/pexels-photo-3831645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Why We Started Image">
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-content">
-                <h2>Where We Operate</h2>
-                <p>Our workshops are hosted at senior centers, churches, and community spaces throughout Cerritos. We collaborate with local organizations and community leaders to bring accessible tech education directly to seniors. These settings provide familiar, comfortable environments where our team can work one-on-one with seniors to address their unique needs and build confidence in their skills. Our goal is to make these resources available to all seniors in our community, ensuring no one is left behind.</p>
-            </div>
-            <div class="img-container">
-                <img src="https://images.pexels.com/photos/3791664/pexels-photo-3791664.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Where We Operate Image">
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-content">
-                <h3>How We Help</h3>
-                <p>Our approach is hands-on, personalized, and compassionate. Through our workshops, seniors learn to navigate smartphones, use social media, manage online banking, and more. Each workshop includes one-on-one guidance tailored to the participant's needs, whether they’re new to technology or looking to expand their skills. We ensure that each lesson contributes to digital confidence and independence, equipping seniors with the tools they need to thrive in a tech-savvy world. Additionally, we incorporate elements of mental engagement, providing stimulating activities that promote cognitive health.</p>
-            </div>
-            <div class="img-container">
-                <img src="https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="How We Help Image">
-            </div>
-        </div>
-
-        <!-- hosted all images on the web and not as assets locally.. cooked if the links break -->
-        <section class="slideshow-container">
-            <h2>Workshop Highlights</h2>
-            <div class="slide">
-                <img src="https://i.ibb.co/FWLkJjW/image.png" alt="Workshop Image 1">
-            </div>
-            <div class="slide">
-                <img src="https://i.ibb.co/cxbzfyP/image.png" alt="Workshop Image 2">
-            </div>
-            <div class="slide">
-                <img src="https://i.ibb.co/KmcKDMS/image.png" alt="Workshop Image 3">
-            </div>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </section>
     </section>
 
-    <script>
-           let slideIndex = 0;
-showSlides();
+    <section class="mission fade-in">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Our Mission</h2>
+            <p>We aim to bridge the digital divide for seniors by offering interactive workshops, personalized guidance, and hands-on technology education.</p>
+        </div>
+    </section>
 
-function plusSlides(n) {
-    slideIndex += n;
-    showSlides();
-}
+    <section class="why fade-in">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Why We Exist</h2>
+            <p>Many seniors face technological barriers that limit their communication, access to information, and daily independence. ElderTech empowers them to thrive in a digital world.</p>
+        </div>
+    </section>
 
-function showSlides() {
-    const slides = document.getElementsByClassName("slide");
-    if (slideIndex >= slides.length) { slideIndex = 0; }
-    if (slideIndex < 0) { slideIndex = slides.length - 1; }
+    <section class="where fade-in">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Where We Operate</h2>
+            <p>Based in Cerritos, CA, we host workshops and offer resources to seniors in our community and surrounding areas.</p>
+        </div>
+    </section>
 
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = "0"; // Fade out all slides
-        slides[i].style.transition = "opacity 1s"; // Transition effect for opacity
-        slides[i].style.display = "none"; // Hide the slides by default
-    }
+    <section class="help fade-in">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>How You Can Help</h2>
+            <p>Join us as a volunteer, donate resources, or spread awareness. Your support helps us make technology accessible and enjoyable for seniors.</p>
+        </div>
+    </section>
 
-    slides[slideIndex].style.display = "block"; // Show the current slide
-    slides[slideIndex].style.opacity = "1"; // Fade in the current slide
-}
+    <style>
+        /* Section background images with grayscale and parallax effect */
+        .about { 
+            background: url("https://cdn.sixtyandme.com/wp-content/uploads/2021/02/SixtyandMe_Senior_Computer_Literacy_Course-e1612698556807.jpg") center/cover no-repeat fixed; 
+            filter: grayscale(100%) sepia(500%) hue-rotate(180deg) saturate(100%);
+        }
+        .mission { 
+            background: url("https://images.stockcake.com/public/1/0/1/1018af53-5b61-467b-983f-6fb4c4b9b741_large/adult-computer-class-stockcake.jpg") center/cover no-repeat fixed; 
+            filter: grayscale(1000%);
+        }
+        .why { 
+            background: url("https://i0.wp.com/charlestoncitypaper.com/wp-content/uploads/uploadcare/780ed2c5-3376-4fb8-9c88-13c49c202514/robot_frankmag.jpg?fit=655%2C279&ssl=1") center/cover no-repeat fixed; 
+            filter:grayscale(100%) sepia(500%) hue-rotate(180deg) saturate(100%);
+        }
+        .where { 
+            background: url("https://debouge.co.uk/wp-content/uploads/2023/06/AI-Debouge-Tech-scaled.jpeg") center/cover no-repeat fixed; 
+            filter: grayscale(1000%);
+        }
+        .help { 
+            background: url("https://cdn.mos.cms.futurecdn.net/cuJ2nHdA2cLngX4bhsHsye.jpg") center/cover no-repeat fixed; 
+            filter: grayscale(100%) sepia(500%) hue-rotate(180deg) saturate(100%);
+        }
 
-    </script>
+        /* Common section styles */
+        section {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 3; /* above overlay */
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        /* Green titles fully visible above overlay */
+        h1, h2 {
+            color: #00FF00 !important; /* bright green */
+            position: relative;
+            z-index: 3;
+        }
+
+        /* Paragraph style: bigger and bold */
+        p {
+            font-size: 1.3rem;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+
 </body>
 </html>
