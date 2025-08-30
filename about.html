@@ -1,145 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - ElderTech Engaged</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <meta name="description" content="Learn about ElderTech, a youth-led organization enhancing technological literacy among seniors.">
-    <meta name="keywords" content="ElderTech, seniors, technology education, Cerritos, CA, digital literacy">
-    <meta name="robots" content="index, follow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | ElderTech Engaged</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+
+    body {
+      background: #1f242d;
+      color: white;
+      animation: fadein 2s ease-out forwards;
+    }
+
+    nav ul li a.this-one-is-active { color: #7cf03d; }
+
+    a { text-decoration: none; color:#b2ebf2; }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      padding: 25px 9%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1f242d;
+      z-index: 100;
+    }
+
+    .navbar .logo { font-size: 30px; font-weight: 700; color: white; }
+
+    .navbar ul { display: flex; }
+
+    .navbar ul li { list-style: none; margin-left: 35px; }
+
+    .navbar ul li a {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      transition: 0.5s;
+    }
+
+    .navbar ul li a:hover { color: #7cf03d; }
+
+    section {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      animation: fadein 2s ease-out forwards;
+    }
+
+    section.left { justify-content: flex-start; text-align: left; padding-left: 50px; }
+    section.right { justify-content: flex-end; text-align: right; padding-right: 50px; }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 3;
+      max-width: 600px;
+    }
+
+    h1, h2 { color: #7cf03d; font-weight: 700; margin-bottom: 10px; }
+    p { color: white; font-size: 1.3rem; line-height: 1.6; font-weight: bold; }
+
+    .about { 
+      background: url("https://cdn.sixtyandme.com/wp-content/uploads/2021/02/SixtyandMe_Senior_Computer_Literacy_Course-e1612698556807.jpg") center/cover no-repeat fixed; 
+      filter: grayscale(100%);
+    }
+
+    .mission { 
+      background: url("https://images.stockcake.com/public/1/0/1/1018af53-5b61-467b-983f-6fb4c4b9b741_large/adult-computer-class-stockcake.jpg") center/cover no-repeat fixed; 
+      filter: grayscale(100%);
+    }
+
+    .why { 
+      background: url("https://i0.wp.com/charlestoncitypaper.com/wp-content/uploads/uploadcare/780ed2c5-3376-4fb8-9c88-13c49c202514/robot_frankmag.jpg?fit=655%2C279&ssl=1") center/cover no-repeat fixed; 
+      filter: grayscale(100%);
+    }
+
+    .where { 
+      background: url("https://debouge.co.uk/wp-content/uploads/2023/06/AI-Debouge-Tech-scaled.jpeg") center/cover no-repeat fixed; 
+      filter: grayscale(100%);
+    }
+
+    .help { 
+      background: url("https://cdn.mos.cms.futurecdn.net/cuJ2nHdA2cLngX4bhsHsye.jpg") center/cover no-repeat fixed; 
+      filter: grayscale(100%);
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Original navbar style preserved -->
-    <nav class="navbar">
-        <a href="index.html" class="logo">ElderTech Engaged</a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="volunteer.html">Volunteer</a></li>
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <a href="index.html" class="logo">ElderTech Engaged</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a class="this-one-is-active" href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+    </ul>
+  </nav>
 
-    <section class="about fade-in">
-        <div class="overlay"></div>
-        <div class="content">
-            <h1>About ElderTech</h1>
-            <p>ElderTech is a youth-led organization dedicated to enhancing technological literacy among seniors, helping them stay engaged, independent, and digitally confident.</p>
-        </div>
-    </section>
+  <section class="about left">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>About ElderTech</h1>
+      <br>
+      <p>ElderTech is a youth-led organization dedicated to enhancing technological literacy among seniors, helping them stay engaged, independent, and digitally confident.</p>
+    </div>
+  </section>
 
-    <section class="mission fade-in">
-        <div class="overlay"></div>
-        <div class="content">
-            <h2>Our Mission</h2>
-            <p>We aim to bridge the digital divide for seniors by offering interactive workshops, personalized guidance, and hands-on technology education.</p>
-        </div>
-    </section>
+  <section class="mission right">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Our Mission</h2>
+      <br>
+      <p>We aim to bridge the digital divide for seniors by offering interactive workshops, personalized guidance, and hands-on technology education.</p>
+    </div>
+  </section>
 
-    <section class="why fade-in">
-        <div class="overlay"></div>
-        <div class="content">
-            <h2>Why We Exist</h2>
-            <p>Many seniors face technological barriers that limit their communication, access to information, and daily independence. ElderTech empowers them to thrive in a digital world.</p>
-        </div>
-    </section>
+  <section class="why left">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Why We Exist</h2>
+      <br>
+      <p>Many seniors face technological barriers that limit their communication, access to information, and daily independence. ElderTech empowers them to thrive in a digital world.</p>
+    </div>
+  </section>
 
-    <section class="where fade-in">
-        <div class="overlay"></div>
-        <div class="content">
-            <h2>Where We Operate</h2>
-            <p>Based in Cerritos, CA, we host workshops and offer resources to seniors in our community and surrounding areas.</p>
-        </div>
-    </section>
+  <section class="where right">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Where We Operate</h2>
+      <br>
+      <p>We host workshops and offer resources to seniors in communities all over Los Angeles, Dallas, and Atlanta.</p>
+    </div>
+  </section>
 
-    <section class="help fade-in">
-        <div class="overlay"></div>
-        <div class="content">
-            <h2>How You Can Help</h2>
-            <p>Join us as a volunteer, donate resources, or spread awareness. Your support helps us make technology accessible and enjoyable for seniors.</p>
-        </div>
-    </section>
-
-    <style>
-        /* Section background images with grayscale and parallax effect */
-        .about { 
-            background: url("https://cdn.sixtyandme.com/wp-content/uploads/2021/02/SixtyandMe_Senior_Computer_Literacy_Course-e1612698556807.jpg") center/cover no-repeat fixed; 
-            filter: grayscale(100%) sepia(500%) hue-rotate(180deg) saturate(100%);
-        }
-        .mission { 
-            background: url("https://images.stockcake.com/public/1/0/1/1018af53-5b61-467b-983f-6fb4c4b9b741_large/adult-computer-class-stockcake.jpg") center/cover no-repeat fixed; 
-            filter: grayscale(1000%);
-        }
-        .why { 
-            background: url("https://i0.wp.com/charlestoncitypaper.com/wp-content/uploads/uploadcare/780ed2c5-3376-4fb8-9c88-13c49c202514/robot_frankmag.jpg?fit=655%2C279&ssl=1") center/cover no-repeat fixed; 
-            filter:grayscale(100%) sepia(500%) hue-rotate(180deg) saturate(100%);
-        }
-        .where { 
-            background: url("https://debouge.co.uk/wp-content/uploads/2023/06/AI-Debouge-Tech-scaled.jpeg") center/cover no-repeat fixed; 
-            filter: grayscale(1000%);
-        }
-        .help { 
-            background: url("https://cdn.mos.cms.futurecdn.net/cuJ2nHdA2cLngX4bhsHsye.jpg") center/cover no-repeat fixed; 
-            filter: grayscale(100%) sepia(500%) hue-rotate(180deg) saturate(100%);
-        }
-
-        /* Common section styles */
-        section {
-            position: relative;
-            min-height: 80vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            z-index: 1;
-        }
-
-        .content {
-            position: relative;
-            z-index: 3; /* above overlay */
-            max-width: 900px;
-            padding: 20px;
-        }
-
-        /* Green titles fully visible above overlay */
-        h1, h2 {
-            color: #00FF00 !important; /* bright green */
-            position: relative;
-            z-index: 3;
-        }
-
-        /* Paragraph style: bigger and bold */
-        p {
-            font-size: 1.3rem;
-            font-weight: bold;
-            line-height: 1.6;
-        }
-
-        /* Fade-in animation */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-        }
-
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-    </style>
+  <section class="help left">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>How You Can Help</h2>
+      <br>
+      <p>Join us as a volunteer, donate resources, or spread awareness. Your support helps us make technology accessible and enjoyable for seniors.</p>
+    </div>
+  </section>
 
 </body>
 </html>
