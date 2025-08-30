@@ -1,187 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer | ElderTech Engaged</title>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer | ElderTech Engaged</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        @keyframes fadein {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+    @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-        body {
-            background: #1f242d;
-            color: white;
-            animation: fadein 3s ease-out forwards;
-        }
+    body {
+      background: #1f242d;
+      color: white;
+      animation: fadein 3s ease-out forwards;
+    }
 
-        nav ul li a.this-one-is-active {
-            color: #7cf03d;
-        }
+    nav ul li a.this-one-is-active {
+      color: #7cf03d;
+    }
 
-        a {
-            text-decoration: none;
-            color:#b2ebf2;
-        }
+    a {
+      text-decoration: none;
+      color:#b2ebf2;
+    }
 
-        a.instagram:visited {
-            color: #b2ebf2;
-            text-decoration: dotted;
-        }
+    a.instagram:visited {
+      color: #b2ebf2;
+      text-decoration: dotted;
+    }
 
-        .navbar {
-            position: fixed;
-            width: 100%;
-            padding: 25px 9%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #1f242d;
-            z-index: 100;
-        }
+    .navbar {
+      position: fixed;
+      width: 100%;
+      padding: 25px 9%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1f242d;
+      z-index: 100;
+    }
 
-        .navbar .logo {
-            font-size: 30px;
-            font-weight: 700;
-            color: white;
-        }
+    .navbar .logo {
+      font-size: 30px;
+      font-weight: 700;
+      color: white;
+    }
 
-        .navbar ul {
-            display: flex;
-        }
+    .navbar ul {
+      display: flex;
+    }
 
-        .navbar ul li {
-            list-style: none;
-            margin-left: 35px;
-        }
+    .navbar ul li {
+      list-style: none;
+      margin-left: 35px;
+    }
 
-        .navbar ul li a {
-            color: white;
-            font-size: 20px;
-            font-weight: 500;
-            transition: 0.5s;
-        }
+    .navbar ul li a {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      transition: 0.5s;
+    }
 
-        .navbar ul li a:hover {
-            color: #7cf03d;
-        }
+    .navbar ul li a:hover {
+      color: #7cf03d;
+    }
 
-        .section-container {
-            padding: 120px 9%;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
+    .section-container {
+      padding: 120px 9%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
 
-        .section-content {
-            max-width: 600px;
-            text-align: center;
-            margin: 0 auto; /* Center the section content */
-        }
+    .section-content {
+      max-width: 600px;
+      text-align: center;
+      margin: 0 auto;
+    }
 
-        h1, h2 {
-            color: #7cf03d;
-        }
+    h1, h2 {
+      color: #7cf03d;
+    }
 
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
 
-        h2 {
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
+    h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
 
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
 
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #1f242d;
-            padding: 20px;
-            border: 2px solid #7cf03d;
-            border-radius: 10px;
-        }
+    form {
+      max-width: 600px;
+      margin: 20px auto 0 auto;
+      background-color: #1f242d;
+      padding: 20px;
+      border: 2px solid #7cf03d;
+      border-radius: 10px;
+    }
 
-        label {
-            color: white;
-            display: block;
-            margin-bottom: 5px;
-        }
+    label {
+      color: white;
+      display: block;
+      margin-bottom: 5px;
+      text-align: left;
+    }
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 2px solid #7cf03d;
-            border-radius: 5px;
-            background-color: #2b2f3b;
-            color: white;
-        }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #7cf03d;
+      border-radius: 5px;
+      background-color: #2b2f3b;
+      color: white;
+    }
 
-        button {
-            background-color: #7cf03d;
-            color: #1f242d;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-    </style>
+    button {
+      background-color: #7cf03d;
+      color: #1f242d;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Centered form group */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* center label and select */
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .form-group label {
+      font-size: 16px;
+      font-weight: 600;
+      color: #7cf03d;
+      margin-bottom: 8px;
+      text-align: center; /* center label text */
+    }
+
+    select#chapter {
+      width: 250px;
+      max-width: 100%;
+      padding: 12px 40px 12px 12px;
+      border: 2px solid #7cf03d;
+      border-radius: 8px;
+      background: linear-gradient(145deg, #2b2f3b, #232732);
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      appearance: none;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'16'%20height%3D'10'%20xmlns%3D'http://www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M1%201l7%207%207-7'%20stroke%3D'%237cf03d'%20stroke-width%3D'2'%20fill%3D'none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px 10px;
+      opacity: 0;
+      transform: translateY(-10px);
+      animation: dropdownFade 0.6s ease forwards;
+    }
+
+    select#chapter:hover {
+      transform: scale(1.02);
+      border-color: #b2ebf2;
+      box-shadow: 0 0 12px rgba(124, 240, 61, 0.5);
+    }
+
+    select#chapter:focus {
+      outline: none;
+      border-color: #7cf03d;
+      box-shadow: 0 0 16px rgba(124, 240, 61, 0.7);
+    }
+
+    select#chapter option {
+      background-color: #1f242d;
+      color: white;
+      padding: 12px;
+      font-size: 15px;
+      border: none;
+    }
+
+    @keyframes dropdownFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html" class="logo">ElderTech Engaged</a>
-        
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a class="this-one-is-active" href="volunteer.html">Volunteer</a></li>
-            
-        </ul>
-    </nav>
-    <section class="section-container">
-        <div class="section-content">
-            <h1>Volunteer with Us</h1>
-            
-            <form action="https://formspree.io/f/myzyebyy" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+  <nav class="navbar">
+    <a href="index.html" class="logo">ElderTech Engaged</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="this-one-is-active" href="volunteer.html">Volunteer</a></li>
+    </ul>
+  </nav>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+  <section class="section-container">
+    <div class="section-content">
+      <h1>Volunteer with Us</h1>
 
-                <button type="submit">Submit</button>
-            </form>
-            <br>
-            <br>
-            <p>Currently, cabinet positions are full. Please check our <a class="instagram" href="https://www.instagram.com/eldertech.socal/" target="_blank">Instagram</a> for any openings or contact us to inquire if you're interested!</p>
-        </div>
-    </section>
+      <!-- Centered Chapter selector -->
+      <div class="form-group">
+        <label for="chapter">Select your Chapter:</label>
+        <select id="chapter" required>
+          <option value="">--Choose--</option>
+          <option value="la">Los Angeles, CA</option>
+          <option value="dtx">Dallas, TX</option>
+          <option value="atl">Atlanta, GA</option>
+        </select>
+      </div>
+
+      <!-- LA form -->
+      <form id="form-la" class="hidden" action="https://formspree.io/f/xpwjpoyr" method="POST">
+        <label for="name-la">Name:</label>
+        <input type="text" id="name-la" name="name" required>
+
+        <label for="email-la">Email:</label>
+        <input type="email" id="email-la" name="email" required>
+
+        <button type="submit">Submit to LA</button>
+      </form>
+
+      <!-- Dallas form -->
+      <form id="form-dtx" class="hidden" action="https://formspree.io/f/xandelpg" method="POST">
+        <label for="name-dtx">Name:</label>
+        <input type="text" id="name-dtx" name="name" required>
+
+        <label for="email-dtx">Email:</label>
+        <input type="email" id="email-dtx" name="email" required>
+
+        <button type="submit">Submit to Dallas</button>
+      </form>
+
+      <!-- Atlanta form -->
+      <form id="form-atl" class="hidden" action="https://formspree.io/f/xkgvjpqz" method="POST">
+        <label for="name-atl">Name:</label>
+        <input type="text" id="name-atl" name="name" required>
+
+        <label for="email-atl">Email:</label>
+        <input type="email" id="email-atl" name="email" required>
+
+        <button type="submit">Submit to Atlanta</button>
+      </form>
+
+      <br><br>
+      <p>Currently, cabinet positions are full. Please check our 
+        <a class="instagram" href="https://www.instagram.com/eldertech.socal/" target="_blank">Instagram</a> 
+        for any openings or contact us to inquire if you're interested!
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const chapterSelect = document.getElementById('chapter');
+    const forms = {
+      la: document.getElementById('form-la'),
+      dtx: document.getElementById('form-dtx'),
+      atl: document.getElementById('form-atl'),
+    };
+
+    chapterSelect.addEventListener('change', function() {
+      Object.values(forms).forEach(form => form.classList.add('hidden'));
+      if (forms[this.value]) {
+        forms[this.value].classList.remove('hidden');
+      }
+    });
+  </script>
 </body>
 </html>
