@@ -7,7 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Default: show the main content, hide the small screen message */
 #small-screen-message {
     display: none;
 }
@@ -16,7 +15,6 @@
     display: block;
 }
 
-/* For screens smaller than 660px in width */
 @media (max-width: 660px) {
     #small-screen-message {
         display: flex;
@@ -197,7 +195,6 @@ a {
     margin: 0 8px;
 }
 
-/* Basic layout styles */
 .home {
     display: flex;
     align-items: center;
@@ -206,12 +203,11 @@ a {
     color: white;
 }
 
-/* Updated styles for img-item */
 .home-img .img-box {
-    position: fixed; /* Fixes the image in place */
+    position: fixed; 
     top: 50%;
-    right: 5%; /* Adjusts position to the right */
-    transform: translateY(-50%); /* Centers the image vertically */
+    right: 5%;
+    transform: translateY(-50%); 
     width: 32vw;
     height: 32vw;
     border-radius: 50%;
@@ -237,8 +233,9 @@ a {
     border-radius: 50%;
 }
 
+/*lol this doesn't work cus the navbar needs to contract will redesign sometime within the next eternity*/
 @media (max-width: 1024px) {
-    /* Scale down image slightly on medium screens */
+
     .home-img .img-box {
         width: 15vw;
         height: 15vw;
@@ -247,7 +244,6 @@ a {
 }
 
 @media (max-width: 768px) {
-    /* Hide the image on smaller screens */
     .home-img .img-box {
         display: none;
     }
